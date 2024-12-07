@@ -1,4 +1,5 @@
-### humanioid
+Humanioid
+# My Env:WSL2(Ubuntu20.04)+MobaXterm
 
 # 1.ISAAC_GYM环境构建——驱动安装和torch配置
 
