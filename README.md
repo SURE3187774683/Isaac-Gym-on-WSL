@@ -20,7 +20,7 @@ https://www.nvidia.com/en-us/drivers/
 ### Isaac_gym创建的环境rlgpu的python版本是确定的（3.7.12）
 
 ### 安装torch（！不要再安装CUDA覆盖了之前的版本）（官方指令）
-pip install torch==1.13.1+cu116 torchvision==0.14.1+cu116 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu116
+(https://pytorch.org/get-started/previous-versions/)
 
 
 # 2.Some BUG
