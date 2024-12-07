@@ -21,7 +21,7 @@ https://www.nvidia.com/en-us/drivers/
 Isaac_gym创建的环境rlgpu的python版本是确定的,不能更改
 
 ### Pytorch_1.13.0+torchvision+torchaudio(NO pytorch-cuda)(！不要再安装CUDA覆盖了之前的版本)
-(https://pytorch.org/get-started/previous-versions/)（官方指令）
+(https://pytorch.org/get-started/previous-versions/)
 
 
 # 2 Some BUG
