@@ -24,7 +24,7 @@ Isaac_gym创建的环境rlgpu的python版本是确定的,不能更改
 (https://pytorch.org/get-started/previous-versions/)（官方指令）
 
 
-# 2.Some BUG
+# 2 Some BUG
 ## 2.1 Segmentation fault (core dumped)
 a.安装：sudo apt install vulkan-tools
 检查：vulkaninfo
@@ -48,7 +48,7 @@ sudo ln -s /usr/lib/x86_64-linux-gnu/libffi.so.7 /usr/lib/x86_64-linux-gnu/libff
 
 设置LD_LIBRARY_PATH：export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:$LD_LIBRARY_PATH
 
-# bashrc文件配置
+# 3 bashrc文件配置
 ## # LIB
 export LD_LIBRARY_PATH=/home/sure/miniconda3/envs/rlgpu/lib
 
