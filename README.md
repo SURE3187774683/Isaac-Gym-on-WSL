@@ -52,8 +52,9 @@ sudo ln -s /usr/lib/x86_64-linux-gnu/libffi.so.7 /usr/lib/x86_64-linux-gnu/libff
 # 3 bashrc文件配置
 ## # LIB
 export LD_LIBRARY_PATH=/home/sure/miniconda3/envs/rlgpu/lib
+export LD_LIBRARY_PATH=LD_LIBRARY_PATH:/usr/lib/wsl/lib
 
-## #xming
+## # xming
 export DISPLAY=10.79.201.2:0.0
 
 ## # CUDA path
