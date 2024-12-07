@@ -3,11 +3,11 @@
 # 1 ISAAC_GYM环境构建——驱动安装和torch配置
 
 ## 1.1 检查CUDA版本和pytorch版本
-import torch
+### import torch
 
-print(torch.__version__)  # 打印PyTorch版本
-print(torch.cuda.is_available())  # 检查CUDA是否可用
-print(torch.version.cuda)  # 打印CUDA版本（当前版本pytorch兼容的cuda）
+### print(torch.__version__)  # 打印PyTorch版本
+### print(torch.cuda.is_available())  # 检查CUDA是否可用
+### print(torch.version.cuda)  # 打印CUDA版本（当前版本pytorch兼容的cuda）
 
 ## 1.2 配置版本：CUDA+Nvidia_Driver+pytorch
 
