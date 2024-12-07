@@ -25,9 +25,16 @@ Isaac_gym创建的环境rlgpu的python版本是确定的,不能更改
 
 
 # 2.Some BUG
-## 2.1 vulkaninfo报错
-error：vulkaninfo: symbol lookup error: /lib/x86_64-linux-gnu/libwayland-client.so.0: undefined symbol: ffi_type_uint32, version LIBFFI_BASE_7.0
+## 2.1 Segmentation fault (core dumped)
+1.安装：sudo apt install vulkan-tools
+检查：vulkaninfo
 
+2.如果进入/usr/share/vulkan/icd.d查看文件信息只有三个文件则执行：
+sudo add-apt-repository ppa:kisak/kisak-mesa
+sudo apt update
+sudo apt upgrade
+
+3.如果vulkaninfo报错（symbol lookup error: /lib/x86_64-linux-gnu/libwayland-client.so.0: undefined symbol: ffi_type_uint32, version LIBFFI_BASE_7.0）
 检查依赖关系&&更新库文件：确保您的系统安装了所有必要的依赖库，特别是libffi
 sudo apt-get install libffi-dev && sudo apt-get update && sudo apt-get upgrade
 
