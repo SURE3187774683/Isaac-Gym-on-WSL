@@ -17,5 +17,5 @@ https://developer.nvidia.com/cuda-12-1-0-download-archive?target_os=Linux&target
 ### 安装torch（！不要再安装CUDA覆盖了之前的版本）
 conda install pytorch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 -c pytorch -c nvidia
 
-### NVIDIA Windows Driver（550）
+### NVIDIA Windows Driver（550）（驱动可以向下兼容）
 https://www.nvidia.com/en-us/drivers/
