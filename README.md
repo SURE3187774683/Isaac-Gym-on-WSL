@@ -43,9 +43,11 @@ c.如果vulkaninfo报错（symbol lookup error: /lib/x86_64-linux-gnu/libwayland
 检查依赖关系&&更新库文件：确保您的系统安装了所有必要的依赖库，特别是libffi
 sudo apt-get install libffi-dev && sudo apt-get update && sudo apt-get upgrade
 
-创建符号链接：如果上述步骤没有解决问题，您可以尝试创建一个符号链接来解决版本冲突问题。根据您的系统情况，您可能需要创建一个指向正确版本的libffi的符号链接。例如：
+创建符号链接并拷贝文件：
+
 sudo ln -s /usr/lib/x86_64-linux-gnu/libffi.so.7 /usr/lib/x86_64-linux-gnu/libffi.so.6
-请根据您的系统实际情况调整上述命令中的库文件版本
+
+sudo cp /home/sure/miniconda3/envs/rlgpu/lib/libpython3.7m.so.1.0 /usr/lib
 
 设置LD_LIBRARY_PATH：export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:$LD_LIBRARY_PATH
 
