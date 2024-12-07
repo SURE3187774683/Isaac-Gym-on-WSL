@@ -31,7 +31,9 @@ Isaac_gym创建的环境rlgpu的python版本是确定的,不能更改
 
 2.如果进入/usr/share/vulkan/icd.d查看文件信息只有三个文件则执行：
 sudo add-apt-repository ppa:kisak/kisak-mesa
+
 sudo apt update
+
 sudo apt upgrade
 
 3.如果vulkaninfo报错（symbol lookup error: /lib/x86_64-linux-gnu/libwayland-client.so.0: undefined symbol: ffi_type_uint32, version LIBFFI_BASE_7.0）
