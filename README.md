@@ -47,3 +47,25 @@ sudo ln -s /usr/lib/x86_64-linux-gnu/libffi.so.7 /usr/lib/x86_64-linux-gnu/libff
 请根据您的系统实际情况调整上述命令中的库文件版本
 
 设置LD_LIBRARY_PATH：export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:$LD_LIBRARY_PATH
+
+# bashrc文件配置
+## # LIB
+export LD_LIBRARY_PATH=/home/sure/miniconda3/envs/rlgpu/lib
+
+## #xming
+export DISPLAY=10.79.201.2:0.0
+
+## # CUDA path
+export PATH=/usr/local/cuda-11.6/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-11.6/lib64:$LD_LIBRARY_PATH
+export CUDA_HOME=/usr/local/cuda-11.6
+
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/sure/RL-code/humanplus-main/HST/isaacgym/python/isaacgym/_bindings/linux-x86_64
+
+## # 设置cuda的编号
+export CUDA_LAUNCH_BLOCKING=1
+export HYDRA_FULL_ERROR=1
+
+## # 删除vulkaninfo报错
+export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:$LD_LIBRARY_PATH
