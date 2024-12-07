@@ -25,4 +25,14 @@ Isaac_gym创建的环境rlgpu的python版本是确定的,不能更改
 
 
 # 2.Some BUG
-## 2.1
+## 2.1 vulkaninfo报错
+error：vulkaninfo: symbol lookup error: /lib/x86_64-linux-gnu/libwayland-client.so.0: undefined symbol: ffi_type_uint32, version LIBFFI_BASE_7.0
+
+检查依赖关系&&更新库文件：确保您的系统安装了所有必要的依赖库，特别是libffi
+sudo apt-get install libffi-dev && sudo apt-get update && sudo apt-get upgrade
+
+创建符号链接：如果上述步骤没有解决问题，您可以尝试创建一个符号链接来解决版本冲突问题。根据您的系统情况，您可能需要创建一个指向正确版本的libffi的符号链接。例如：
+sudo ln -s /usr/lib/x86_64-linux-gnu/libffi.so.7 /usr/lib/x86_64-linux-gnu/libffi.so.6
+请根据您的系统实际情况调整上述命令中的库文件版本
+
+设置LD_LIBRARY_PATH：export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:$LD_LIBRARY_PATH
