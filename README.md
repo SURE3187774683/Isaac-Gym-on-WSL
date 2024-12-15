@@ -62,3 +62,23 @@ export HYDRA_FULL_ERROR=1
 export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:$LD_LIBRARY_PATH
 ### # 这有助于减少内存碎片化，确保有足够的连续内存空间分配给大的内存请求
 export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:50
+
+# 2 有用的帖子
+## 2.1 安装教程
+https://blog.csdn.net/m0_37802038/article/details/134629194?ops_request_misc=&request_id=&biz_id=102&utm_term=Isaacgym%E6%8A%A5%E9%94%99%20Segmentation%20fault&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-9-134629194.142^v100^pc_search_result_base6&spm=1018.2226.3001.4187
+
+https://blog.csdn.net/wsygbthhhh/article/details/143918730?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522a54726eeae0be86042a6003e0c40c814%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=a54726eeae0be86042a6003e0c40c814&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-6-143918730-null-null.142^v100^pc_search_result_base6&utm_term=isaacgym%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B&spm=1018.2226.3001.4187
+
+https://blog.csdn.net/littlewells/article/details/140179837
+
+https://blog.csdn.net/weixin_44061195/article/details/131830133
+## 2.2 CUDA Python tookit pytorch匹配关系
+https://pytorch.org/get-started/previous-versions/
+
+https://blog.csdn.net/weixin_41809117/article/details/141246957
+
+https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cuda-major-component-versions__table-cuda-toolkit-driver-versions
+
+## 2.3 英伟达驱动卸载安装教程
+https://blog.csdn.net/Perfect886/article/details/119109380
+
