@@ -1,4 +1,4 @@
-# Humanioid(Windows+Wsl2(Ubuntu20.04))
+# Isaac Gym(Windows+Wsl2(Ubuntu20.04))
 
 # 1 ISAAC_GYM环境构建——驱动安装和torch配置
 
