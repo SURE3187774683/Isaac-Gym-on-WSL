@@ -9,10 +9,10 @@ https://developer.nvidia.com/cuda-12-1-0-download-archive?target_os=Linux&target
 
 ## 1.2 Some BUG
 ### Segmentation fault (core dumped)
-a.安装：sudo apt install vulkan-tools
+a. 安装：sudo apt install vulkan-tools
 检查：vulkaninfo
 
-b.如果进入/usr/share/vulkan/icd.d查看文件信息只有三个文件则执行：
+b. 如果进入/usr/share/vulkan/icd.d查看文件信息只有三个文件则执行：
 
 sudo add-apt-repository ppa:kisak/kisak-mesa
 
@@ -20,7 +20,7 @@ sudo apt update
 
 sudo apt upgrade
 
-c.如果vulkaninfo报错（symbol lookup error: /lib/x86_64-linux-gnu/libwayland-client.so.0: undefined symbol: ffi_type_uint32, version LIBFFI_BASE_7.0）
+c. 如果vulkaninfo报错（symbol lookup error: /lib/x86_64-linux-gnu/libwayland-client.so.0: undefined symbol: ffi_type_uint32, version LIBFFI_BASE_7.0）
 
 检查依赖关系&&更新库文件：确保您的系统安装了所有必要的依赖库，特别是libffi
 sudo apt-get install libffi-dev && sudo apt-get update && sudo apt-get upgrade
@@ -32,6 +32,10 @@ sudo ln -s /usr/lib/x86_64-linux-gnu/libffi.so.7 /usr/lib/x86_64-linux-gnu/libff
 sudo cp /home/sure/miniconda3/envs/rlgpu/lib/libpython3.7m.so.1.0 /usr/lib
 
 设置LD_LIBRARY_PATH：export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:$LD_LIBRARY_PATH
+d. 黑屏
+sudo apt-get update
+sudo apt-get install ubuntu-desktop
+reboot
 
 ## 1.3 bashrc文件配置
 ### # isaacgym
