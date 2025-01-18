@@ -4,7 +4,7 @@
 
 ## 1.1 配置版本：CUDA+Nvidia_Driver+pytorch
 
-### CUDA Toolkit——11.6（！选择wsl版本）
+### CUDA Toolkit——12.4（！选择wsl版本）
 https://developer.nvidia.com/cuda-12-1-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local
 
 ## 1.2 Some BUG
