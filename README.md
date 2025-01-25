@@ -1,6 +1,6 @@
-Env : Wsl2(Ubuntu20.04)+Cuda-12.4+cuda_driver_556
+## Env : Wsl2(Ubuntu20.04)+Cuda-12.4+cuda_driver_556
 
-Pipeline：
+## Pipeline：
 
 ## 一、按照帖子安装Isaacgym
 
@@ -16,7 +16,6 @@ https://blog.csdn.net/m0_37802038/article/details/134629194?ops_request_misc=&re
 ### 2. 运行报错：“ImportError: libpython3.8.so.1.0/ libpython3.7.so.1.0: cannot open shared object file: No such file or directory”
 
 解决方法：
-
 export LD_LIBRARY_PATH=/path_to_your_env/lib:$LD_LIBRARY_PATH
 e.g.: export LD_LIBRARY_PATH=/home/sure/miniconda3/envs/rlgpu/lib:$LD_LIBRARY_PATH
 
@@ -27,50 +26,48 @@ e.g.: export LD_LIBRARY_PATH=/home/sure/miniconda3/envs/rlgpu/lib:$LD_LIBRARY_PA
 e.g. export LD_LIBRARY_PATH=LD_LIBRARY_PATH:path
 
 ### 4. 黑屏
-sudo apt-get update
-sudo apt-get install ubuntu-desktop
-reboot
+sudo apt-get update && sudo apt-get install ubuntu-desktop && reboot
 
 ### 5. 运行报错：Segmentation fault (core dumped)
 
 解决方法：
-
 #### 5.1  输入vulkaninfo看是否有一长串输出，如果没有，执行sudo apt install vulkan-tools
 
 #### 5.2 cd /usr/share/vulkan/icd.d看文件数量，如果只有三个文件，执行
-sudo add-apt-repository ppa:kisak/kisak-mesa
-sudo apt update
+sudo add-apt-repository ppa:kisak/kisak-mesa &&
+sudo apt update &&
 sudo apt upgrade
 
 #### 5.3 . 如果vulkaninfo报错（symbol lookup error: /lib/x86_64-linux-gnu/libwayland-client.so.0: undefined symbol: ffi_type_uint32, version LIBFFI_BASE_7.0）
 执行
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libffi.so.7
+
 或执行
-sudo apt-get install libffi-dev && sudo apt-get update && sudo apt-get upgrade
-创建符号链接并拷贝文件：
-sudo ln -s /usr/lib/x86_64-linux-gnu/libffi.so.7 /usr/lib/x86_64-linux-gnu/libffi.so.6
-sudo cp /home/sure/miniconda3/envs/rlgpu/lib/libpython3.7m.so.1.0 /usr/lib
-设置LD_LIBRARY_PATH：export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:$LD_LIBRARY_PATH
+sudo apt-get install libffi-dev && sudo apt-get update && sudo apt-get upgrade &&
+sudo ln -s /usr/lib/x86_64-linux-gnu/libffi.so.7 /usr/lib/x86_64-linux-gnu/libffi.so.6 &&
+sudo cp /home/sure/miniconda3/envs/rlgpu/lib/libpython3.7m.so.1.0 /usr/lib &&
+export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:$LD_LIBRARY_PATH
 
 #### 5.4 如果isaacgym环境下可以跑example，但hgym下没法跑，报错Segmentation fault (core dumped)
-配置vulkan的路径：export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/dzn_icd.x86_64.json
+配置vulkan的路径：
+export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/dzn_icd.x86_64.json
 
 ## 三、环境变量设置
 
-### cuda-12.4
+### # cuda-12.4
 export PATH=/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export PATH=/usr/local/cuda-12.4/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-12.4/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 export CUDA_HOME=/usr/local/cuda-12.4
 
-### display
+### # display
 export DISPLAY=localhost:0.0
-isaacgym
-Export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/sure/workspace/isaacgym/python/isaacgym/_bindings/linux-x86_64
-use cuda
+### # isaacgym
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/sure/workspace/isaacgym/python/isaacgym/_bindings/linux-x86_64
+### # use cuda
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/wsl/lib/
-rlgpu环境可以跑example，但hgym没法跑，指定Vulkan
+### # rlgpu环境可以跑example，但hgym没法跑，指定Vulkan
 export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/dzn_icd.x86_64.json
 
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libffi.so.7
