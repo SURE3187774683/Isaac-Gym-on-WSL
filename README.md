@@ -1,4 +1,4 @@
-## Env : Wsl2(Ubuntu20.04)+Cuda-12.4+cuda_driver_556
+# Env : Wsl2(Ubuntu20.04) + Cuda-12.4 + cuda_driver_556 + NVIDIA_3060
 
 ## Pipeline：
 
